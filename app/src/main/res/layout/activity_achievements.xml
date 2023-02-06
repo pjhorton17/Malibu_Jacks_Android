@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="fill"
+    android:background="#00CCFC"
+    android:foregroundGravity="fill"
+    app:layout_anchorGravity="fill"
+    tools:context=".Achievements">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:fontFamily="@font/arial_rounded_mt_bold"
+        android:gravity="center_horizontal"
+        android:hapticFeedbackEnabled="false"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:text="Achievements"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/adViewFrameLayoutAchievements"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TableRow
+                android:id="@+id/spacer1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:minHeight="3dp" />
+
+            <TableRow
+                android:id="@+id/oneIsDone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/achievement_title_border"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:inputType="textPersonName"
+                        android:minHeight="40sp"
+                        android:selectAllOnFocus="false"
+                        android:text="One is Done!"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="Complete your first mini-golf game"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/oneIsDoneStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="0 / 1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/spacer2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:minHeight="3dp" />
+
+            <TableRow
+                android:id="@+id/veteran"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/achievement_title_border"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:inputType="textPersonName"
+                        android:minHeight="40sp"
+                        android:selectAllOnFocus="false"
+                        android:text="Mini-Golf Veteran"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B7FFBF"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="Complete 5 rounds of mini-golf"
+                            android:textColor="#000000"
+                            android:textSize="15sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <EditText
+                            android:id="@+id/miniGolfVetStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="2 / 5"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/spacer3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:minHeight="3dp" />
+
+            <TableRow
+                android:id="@+id/explorer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/achievement_title_border"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:inputType="textPersonName"
+                        android:minHeight="40sp"
+                        android:selectAllOnFocus="false"
+                        android:text="Explorer"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="Visit each screen in this app"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/explorerStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="2 / 6"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/spacer4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:minHeight="3dp">
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/surveySays"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/achievement_title_border"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:inputType="textPersonName"
+                        android:minHeight="40sp"
+                        android:selectAllOnFocus="false"
+                        android:text="Survey Says?"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="Rate this app in the play store"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/appRatedStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="0 / 1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/spacer5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:minHeight="3dp" />
+
+            <TableRow
+                android:id="@+id/historicGame"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/achievement_title_border"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:inputType="textPersonName"
+                        android:minHeight="40sp"
+                        android:selectAllOnFocus="false"
+                        android:text="Historic Game"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="Revisit a scorecard from your history"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/historicGameStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="0 / 1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/spacer6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:minHeight="3dp" />
+
+            <TableRow
+                android:id="@+id/sharingIsCaring"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FF76"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:inputType="textPersonName"
+                        android:minHeight="40sp"
+                        android:selectAllOnFocus="false"
+                        android:text="Sharing Is Caring"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="Share this app with a friend"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/sharingStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="0 / 1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/spacer7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:minHeight="3dp" />
+
+            <TableRow
+                android:id="@+id/noMercy"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FF76"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:inputType="textPersonName"
+                        android:minHeight="40sp"
+                        android:selectAllOnFocus="false"
+                        android:text="No Mercy"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="A player records a score of 7 or higher"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/noMercyStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="0 / 1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/spacer8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:minHeight="3dp" >
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/par"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                    android:id="@+id/parTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00FF76"
+                    android:clickable="false"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/arial_rounded_mt_bold"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:hapticFeedbackEnabled="false"
+                    android:inputType="textPersonName"
+                    android:minHeight="40sp"
+                    android:selectAllOnFocus="false"
+                    android:text="Par!"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/parDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="Score a game equivalent to the course par"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/parStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="0 / 1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/spacer9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/birdie"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/birdieTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FF76"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:inputType="textPersonName"
+                        android:minHeight="40sp"
+                        android:selectAllOnFocus="false"
+                        android:text="Birdie!"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/birdieDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="Score a game one under the course par"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/birdieStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="0 / 1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/spacer10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/eagle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/eagleTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FF76"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:inputType="textPersonName"
+                        android:minHeight="40sp"
+                        android:selectAllOnFocus="false"
+                        android:text="Eagle!"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/eagleDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="Score a game two under the course par"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/eagleStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="0 / 1"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/spacer11"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/minigolfPro"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextTextPersonName23"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#00FF76"
+                        android:clickable="false"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:hapticFeedbackEnabled="false"
+                        android:inputType="textPersonName"
+                        android:minHeight="40sp"
+                        android:selectAllOnFocus="false"
+                        android:text="Mini-Golf Pro"
+                        android:textColor="#000000"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/editTextTextPersonName25"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="Earn all achievements!"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/miniGolfProStatusLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.75"
+                            android:background="@drawable/achievement_description_border"
+                            android:clickable="false"
+                            android:ems="10"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:fontFamily="@font/chalkboard_se_light_"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:hapticFeedbackEnabled="false"
+                            android:inputType="textPersonName"
+                            android:minHeight="40sp"
+                            android:selectAllOnFocus="false"
+                            android:text="0 / 10"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/spacer12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#000000"
+                android:minHeight="3dp" />
+
+        </TableLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/adViewFrameLayoutAchievements"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

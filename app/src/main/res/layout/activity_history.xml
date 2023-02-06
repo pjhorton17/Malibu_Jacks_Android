@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00CCFC"
+    tools:context=".History">
+
+    <ScrollView
+        android:id="@+id/historyScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/historyInstructionsTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:id="@+id/scoreHistoryTableView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="#00CCFC">
+
+            <!-- Table Heading -->
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/dateHeaderLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="3"
+                    android:background="@drawable/history_title_border"
+                    android:fontFamily="@font/arial_rounded_mt_bold"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="@string/date"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/locationHeaderLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/history_title_border"
+                    android:fontFamily="@font/arial_rounded_mt_bold"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="@string/location"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/winningPlayerHeaderLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:background="@drawable/history_title_border"
+                    android:fontFamily="@font/arial_rounded_mt_bold"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="@string/winner"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/scoreHeaderLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="3"
+                    android:background="@drawable/history_title_border"
+                    android:fontFamily="@font/arial_rounded_mt_bold"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:text="@string/score"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="#00CCFC"
+                    android:fontFamily="@font/arial_rounded_mt_bold"
+                    android:gravity="center"
+                    android:padding="10sp"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="20dp"
+                    tools:ignore="TextContrastCheck" />
+
+            </TableRow>
+
+            <!-- Table Data -->
+
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/noHistoryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/arial_rounded_mt_bold"
+        android:gravity="center"
+        android:text="@string/no_history_to_display_n_n_finish_your_first_game_and_come_back"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/historyInstructionsTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFC28C"
+        android:fontFamily="@font/chalkboard_se_light_"
+        android:lines="2"
+        android:paddingStart="3dp"
+        android:text="- Tap table headers to sort games\n- Tap and hold a row to delete from your history"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/adViewFrameLayoutHistory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/historyScrollView" />
+
+    <FrameLayout
+        android:id="@+id/deleteGameConfirmationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF464646"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/deleteGameSelectionView"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/confirmation_view_border"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/confirmationTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/chalkboard_se_light_"
+                    android:gravity="center"
+                    android:text="Are you sure you want to delete this game?"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <Button
+                        android:id="@+id/doNotDeleteGameButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:minHeight="65dp"
+                        android:text="No"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#00FFCE"
+                        app:cornerRadius="20dp"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="2dp" />
+
+                    <Space
+                        android:layout_width="35dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/yesDeleteGameButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="65dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:includeFontPadding="false"
+                        android:minHeight="65dp"
+                        android:text="Yes"
+                        android:textAllCaps="false"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:backgroundTint="#00FFCE"
+                        app:cornerRadius="20dp"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="2dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/adViewFrameLayoutHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/turf"
+    tools:context=".Scorecard">
+
+    <Button
+        android:id="@+id/endGameButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/chalkboard_se_bold_"
+        android:lines="1"
+        android:text="End Game"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:backgroundTint="#00FFCE"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/viewRankingButton"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+    <TextView
+        android:id="@+id/ballColorLabel"
+        android:layout_width="40dp"
+        android:layout_height="175px"
+        android:background="@drawable/total_label_background"
+        android:fontFamily="@font/chalkboard_se_bold_"
+        android:foregroundGravity="fill"
+        android:gravity="center"
+        android:scaleType="centerCrop"
+        android:text="Ball"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <TextView
+        android:id="@+id/playerLabel"
+        android:layout_width="75dp"
+        android:layout_height="175px"
+        android:background="@drawable/total_label_background"
+        android:fontFamily="@font/chalkboard_se_bold_"
+        android:foregroundGravity="fill"
+        android:gravity="center"
+        android:scaleType="centerCrop"
+        android:text="Player"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@+id/ballColorLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <TextView
+        android:id="@+id/totalLabel"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:height="175px"
+        android:background="@drawable/total_label_background"
+        android:fontFamily="@font/chalkboard_se_bold_"
+        android:gravity="center"
+        android:text="Total"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/playerLabel"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:hapticFeedbackEnabled="true"
+        app:layout_constraintEnd_toStartOf="@+id/totalLabel"
+        app:layout_constraintStart_toEndOf="@+id/playerLabel"
+        app:layout_constraintTop_toTopOf="@id/playerLabel">
+
+        <LinearLayout
+            android:id="@+id/scoreTableLinearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toStartOf="@+id/totalLabel"
+            app:layout_constraintStart_toEndOf="@+id/playerLabel"
+            app:layout_constraintTop_toTopOf="@id/playerLabel">
+
+            <TableRow
+                android:id="@+id/parValueRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/holeNumberRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/player1ScoreRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/player2ScoreRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/player3ScoreRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/player4ScoreRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/player5ScoreRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/player6ScoreRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/player7ScoreRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/player8ScoreRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TableRow
+                android:id="@+id/player9ScoreRow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/viewRankingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:fontFamily="@font/chalkboard_se_bold_"
+        android:text="View Ranking"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        app:backgroundTint="#00FFCE"
+        app:cornerRadius="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerNameStackview"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+    <LinearLayout
+        android:id="@+id/ballColorStackview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/ballColorLabel"
+        app:layout_constraintRight_toRightOf="@id/ballColorLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ballColorLabel"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/playerNameStackview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/playerLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintRight_toRightOf="@id/playerLabel"
+        app:layout_constraintStart_toEndOf="@id/ballColorLabel"
+        app:layout_constraintTop_toBottomOf="@+id/playerLabel"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/totalScoreStackview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintEnd_toEndOf="@id/totalLabel"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintRight_toRightOf="@id/totalLabel"
+        app:layout_constraintStart_toEndOf="@id/horizontalScrollView"
+        app:layout_constraintTop_toBottomOf="@+id/totalLabel">
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/enterParView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF464646"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:id="@+id/parSelectionView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#FFCF93">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/parHeaderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <Button
+                        android:id="@+id/exitEnterParViewButton"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:drawablePadding="0dp"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:includeFontPadding="false"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:padding="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="0dp"
+                        android:text="X"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        app:backgroundTint="#00FFCE"
+                        app:elevation="0dp"
+                        app:iconPadding="0dp"
+                        app:strokeColor="#000000"
+                        app:strokeWidth="2dp" />
+
+                    <TextView
+                        android:id="@+id/enterParHoleReminderLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_toRightOf="@id/exitEnterParViewButton"
+                        android:background="#FF8300"
+                        android:fontFamily="@font/arial_rounded_mt_bold"
+                        android:foregroundGravity="center"
+                        android:gravity="center"
+                        android:text="Enter par for hole X"
+                        android:textColor="#000000"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <Button
+                            android:id="@+id/par1Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/chalkboard_se_bold_"
+                            android:foregroundGravity="center"
+                            android:text="1"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            app:backgroundTint="#00FFCE"
+                            app:cornerRadius="20dp"
+                            app:strokeColor="#000000"
+                            app:strokeWidth="2dp" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/par2Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/chalkboard_se_bold_"
+                            android:foregroundGravity="center"
+                            android:text="2"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            app:backgroundTint="#00FFCE"
+                            app:cornerRadius="20dp"
+                            app:strokeColor="#000000"
+                            app:strokeWidth="2dp" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/par3Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/chalkboard_se_bold_"
+                            android:foregroundGravity="center"
+                            android:text="3"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            app:backgroundTint="#00FFCE"
+                            app:cornerRadius="20dp"
+                            app:strokeColor="#000000"
+                            app:strokeWidth="2dp" />
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="10dp">
+
+                        <Button
+                            android:id="@+id/par4Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/chalkboard_se_bold_"
+                            android:foregroundGravity="center"
+                            android:text="4"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            app:backgroundTint="#00FFCE"
+                            app:cornerRadius="20dp"
+                            app:strokeColor="#000000"
+                            app:strokeWidth="2dp" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/par5Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/chalkboard_se_bold_"
+                            android:foregroundGravity="center"
+                            android:text="5"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            app:backgroundTint="#00FFCE"
+                            app:cornerRadius="20dp"
+                            app:strokeColor="#000000"
+                            app:strokeWidth="2dp" />
+
+                        <Space
+                            android:layout_width="5dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <Button
+                            android:id="@+id/par6Button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/chalkboard_se_bold_"
+                            android:foregroundGravity="center"
+                            android:text="6"
+                            android:textColor="#000000"
+                            android:textSize="20sp"
+                            app:backgroundTint="#00FFCE"
+                            app:cornerRadius="20dp"
+                            app:strokeColor="#000000"
+                            app:strokeWidth="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/endGameSubview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF464646"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/mainStackview"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/confirmation_view_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/endGameConfirmationText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/chalkboard_se_light_"
+                android:gravity="center"
+                android:text="Do you want to end the game early? \n\n(You will have a chance to save your scorecard to your history)"
+                android:textColor="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/noEndGameButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arial_rounded_mt_bold"
+                    android:minWidth="75dp"
+                    android:text="No"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/yesEndGameButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/arial_rounded_mt_bold"
+                    android:minWidth="75dp"
+                    android:text="Yes"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/enterScoreSubview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#BF464646"
+        android:minHeight="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/enterScoreOptionView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/appreciation_label_border"
+            android:orientation="vertical"
+            android:weightSum="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/scoreEntryOwnerLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="0dp"
+                android:height="50dp"
+                android:background="@drawable/tip_label_border"
+                android:fontFamily="@font/arial_rounded_mt_bold"
+                android:gravity="center"
+                android:text="Hole X: Player X"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/divider18"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@android:color/transparent" />
+
+            <LinearLayout
+                android:id="@+id/score1_2_stackView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/divider16"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/score1Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/score_1"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <View
+                    android:id="@+id/divider15"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/score2Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/score_2"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <View
+                    android:id="@+id/divider17"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider22"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@android:color/transparent" />
+
+            <LinearLayout
+                android:id="@+id/score3_4_stackView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/divider19"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/score3Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/score_3"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <View
+                    android:id="@+id/divider20"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/score4Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/score_4"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <View
+                    android:id="@+id/divider21"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider27"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@android:color/transparent" />
+
+            <LinearLayout
+                android:id="@+id/score5_6_stackView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/divider23"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/score5Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/score_5"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <View
+                    android:id="@+id/divider24"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent" />
+
+                <ImageButton
+                    android:id="@+id/score6Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/score_6"
+                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                <View
+                    android:id="@+id/divider25"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:color/transparent" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider28"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/clearScoreButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:minWidth="150dp"
+                    android:text="Clear Score"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+
+                <View
+                    android:id="@+id/divider14"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/ouchButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:minWidth="150dp"
+                    android:text="7+"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/exitScoreViewButton"
+            android:layout_width="65dp"
+            android:layout_height="75dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            android:width="60dp"
+            android:height="60dp"
+            android:fontFamily="@font/arial_rounded_mt_bold"
+            android:maxWidth="60dp"
+            android:minWidth="60dp"
+            android:minHeight="60dp"
+            android:text="X"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:backgroundTint="#00FFCE"
+            app:cornerRadius="30dp"
+            app:strokeColor="#000000"
+            app:strokeWidth="2dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ouchConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/enterScoreOptionView"
+            app:layout_constraintLeft_toLeftOf="@+id/enterScoreOptionView"
+            app:layout_constraintRight_toRightOf="@+id/enterScoreOptionView"
+            app:layout_constraintTop_toTopOf="@+id/enterScoreOptionView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <Button
+                    android:id="@+id/minusOuchButton"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+
+                    android:fontFamily="@font/arial_rounded_mt_bold"
+                    android:text="-"
+                    android:textColor="#000000"
+                    android:textSize="50sp"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="37.5dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+
+                <TextView
+                    android:id="@+id/ouchScoreTextView"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+
+                    android:fontFamily="@font/arial_rounded_mt_bold"
+                    android:gravity="center"
+                    android:text="7"
+                    android:textColor="#000000"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:id="@+id/plusOuchButton"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:fontFamily="@font/arial_rounded_mt_bold"
+                    android:text="+"
+                    android:textColor="#000000"
+                    android:textSize="50sp"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="37.5dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/enterOuchScoreButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/arial_rounded_mt_bold"
+                android:text="Enter"
+                android:textColor="#000000"
+                app:backgroundTint="#00FFCE"
+                app:cornerRadius="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:strokeColor="#000000"
+                app:strokeWidth="2dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/scoreUpdateConfirmationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF464646"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/confirmation_view_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/chalkboard_se_light_"
+                android:gravity="center"
+                android:text="There is already a score entered here.  Are you sure you want to update it?"
+                android:textColor="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/doNotUpdateScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+
+                <View
+                    android:id="@+id/divider29"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/doUpdateScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/parUpdateConfirmationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF464646"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/confirmation_view_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewConfirmationMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/chalkboard_se_light_"
+                android:gravity="center"
+                android:text="There is already a par entry for this hole.  Are you sure you want to update it?"
+                android:textColor="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/doNotUpdatePar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+
+                <View
+                    android:id="@+id/parOptionButtonDivider"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/doUpdatePar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/saveGameToHistoryConfirmationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF464646"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/confirmation_view_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/chalkboard_se_light_"
+                android:gravity="center"
+                android:text="Do you want to save this scorecard to your history?"
+                android:textColor="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/doNotSaveGameToHistoryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+
+                <View
+                    android:id="@+id/divider30"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/doSaveGameToHistoryButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/gameDoneConfirmationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF464646"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/confirmation_view_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/chalkboard_se_light_"
+                android:gravity="center"
+                android:text="Game over! Advance to final scoreboard?\n\n This game will be saved to your history."
+                android:textColor="#FFFFFF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/editScoreButton"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="No, I need to edit a score"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+
+                <View
+                    android:id="@+id/divider26"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent" />
+
+                <Button
+                    android:id="@+id/gameDoneButton"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Yes, take me there"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="10sp"
+                    app:backgroundTint="#00FFCE"
+                    app:cornerRadius="20dp"
+                    app:strokeColor="#000000"
+                    app:strokeWidth="2dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/viewRankingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#BF464646"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:id="@+id/viewRankingTable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="false"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:foregroundGravity="center"
+            android:gravity="center">
+
+            <TableRow
+                android:id="@+id/headerRow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|fill_vertical">
+
+                <TextView
+                    android:id="@+id/playerRankHeaderLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/view_ranking_headers_background"
+                    android:fontFamily="@font/chalkboard_se_bold_"
+                    android:gravity="center"
+                    android:padding="5sp"
+                    android:text="Rank"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/playerNameHeaderLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/view_ranking_headers_background"
+                    android:fontFamily="@font/chalkboard_se_bold_"
+                    android:gravity="center"
+                    android:padding="5sp"
+                    android:text="Player"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/playerScoreHeaderLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/view_ranking_headers_background"
+                    android:fontFamily="@font/chalkboard_se_bold_"
+                    android:gravity="center"
+                    android:padding="5sp"
+                    android:text="Score"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/strokesBehindHeaderLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_ranking_headers_background"
+                    android:fontFamily="@font/chalkboard_se_bold_"
+                    android:gravity="center_horizontal"
+                    android:padding="5sp"
+                    android:text="Strokes \nBehind"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/courseParHeaderLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/view_ranking_headers_background"
+                    android:fontFamily="@font/chalkboard_se_bold_"
+                    android:gravity="center_horizontal"
+                    android:padding="5sp"
+                    android:text="Course Par\n(TBD)"
+                    android:textColor="#FFFFFF" />
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/podiumDoneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewRankingTable"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/arial_rounded_mt_bold"
+            android:text="Done"
+            android:textColor="#000000"
+            app:backgroundTint="#00FFCE"
+            app:cornerRadius="20dp"
+            app:strokeColor="#000000"
+            app:strokeWidth="2dp" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/adViewFrameLayoutScorecard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

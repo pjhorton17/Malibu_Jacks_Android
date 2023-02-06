@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="#00CCFC"
+    tools:context=".NumberOfPlayers">
+
+    <EditText
+        android:id="@+id/editTextTextPersonName27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/chalkboard_se_bold_"
+        android:gravity="center_horizontal"
+        android:inputType="textPersonName"
+        android:text="How many players?"
+        android:textSize="35sp"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:minHeight="40sp"
+        android:selectAllOnFocus="false"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName27">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/players1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/chalkboard_se_bold_"
+                android:minHeight="70dp"
+                android:tag="1"
+                android:text="1"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:backgroundTint="#00FFCE"
+                app:cornerRadius="20sp"
+                app:strokeColor="#000000"
+                app:strokeWidth="2sp" />
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/players2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/chalkboard_se_bold_"
+                android:minHeight="70dp"
+                android:tag="2"
+                android:text="2"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:backgroundTint="#00FFCE"
+                app:cornerRadius="20sp"
+                app:strokeColor="#000000"
+                app:strokeWidth="2sp" />
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/players3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/chalkboard_se_bold_"
+                android:minHeight="70dp"
+                android:tag="3"
+                android:text="3"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:backgroundTint="#00FFCE"
+                app:cornerRadius="20sp"
+                app:strokeColor="#000000"
+                app:strokeWidth="2sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/players4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/chalkboard_se_bold_"
+                android:minHeight="70dp"
+                android:tag="4"
+                android:text="4"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:backgroundTint="#00FFCE"
+                app:cornerRadius="20sp"
+                app:strokeColor="#000000"
+                app:strokeWidth="2sp" />
+
+            <View
+                android:id="@+id/divider10"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/players5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/chalkboard_se_bold_"
+                android:minHeight="70dp"
+                android:tag="5"
+                android:text="5"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:backgroundTint="#00FFCE"
+                app:cornerRadius="20sp"
+                app:strokeColor="#000000"
+                app:strokeWidth="2sp" />
+
+            <View
+                android:id="@+id/divider11"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/players6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/chalkboard_se_bold_"
+                android:minHeight="70dp"
+                android:tag="6"
+                android:text="6"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:backgroundTint="#00FFCE"
+                app:cornerRadius="20sp"
+                app:strokeColor="#000000"
+                app:strokeWidth="2sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/players7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/chalkboard_se_bold_"
+                android:minHeight="70dp"
+                android:tag="7"
+                android:text="7"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:backgroundTint="#00FFCE"
+                app:cornerRadius="20sp"
+                app:strokeColor="#000000"
+                app:strokeWidth="2sp" />
+
+            <View
+                android:id="@+id/divider12"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/players8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/chalkboard_se_bold_"
+                android:minHeight="70dp"
+                android:tag="8"
+                android:text="8"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:backgroundTint="#00FFCE"
+                app:cornerRadius="20sp"
+                app:strokeColor="#000000"
+                app:strokeWidth="2sp" />
+
+            <View
+                android:id="@+id/divider13"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent" />
+
+            <Button
+                android:id="@+id/players9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/chalkboard_se_bold_"
+                android:minHeight="70dp"
+                android:tag="9"
+                android:text="9"
+                android:textAllCaps="false"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                app:backgroundTint="#00FFCE"
+                app:cornerRadius="20sp"
+                app:strokeColor="#000000"
+                app:strokeWidth="2sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/adViewFrameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:srcCompat="@drawable/putting_green" />
+
+    <FrameLayout
+        android:id="@+id/adViewFrameLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+      </FrameLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>

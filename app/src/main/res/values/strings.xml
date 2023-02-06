@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PuttPutt_ScoreCard</string>
+    <string name="title_activity_history">history</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="date">Date</string>
+    <string name="location">Location</string>
+    <string name="winner">Winner</string>
+    <string name="score">Score</string>
+    <string name="details">Tap for Details</string>
+    <string name="no_history_to_display_n_n_finish_your_first_game_and_come_back">No history to display!\n\n Finish your first game and come back!</string>
+    <string name="tapHere">Tap Here</string>
+    <string name="Complete">Complete!</string>
+    <string name="title_activity_details">Details</string>
+</resources>
